@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
@@ -7,8 +8,37 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-  }
+}
+
+.container-header{
+    display: flex;
+    justify-content: end;
+    background: url(assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
