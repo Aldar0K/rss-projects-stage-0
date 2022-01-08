@@ -19,11 +19,12 @@ html {
 }
 
 .container-header{
+    min-height: 90px;
     display: flex;
     justify-content: end;
     background: url(assets/img/bg.jpg);
     background-repeat: no-repeat;
-    background-position: center 0;
+    background-position: top;
 }
 
 .nav-list {
