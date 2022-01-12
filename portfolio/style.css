@@ -194,20 +194,11 @@ html {
 .skills-list {
     padding-top: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .skills-item {
-    padding-right: 40px;
-    width: 320px;
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills-item-right {
-    padding-right: 0px;
     width: 320px;
     height: 240px;
     display: flex;
