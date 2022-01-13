@@ -254,7 +254,7 @@ html {
     display: flex;
 }
 
-.portfolio-pictures {
+.portfolio-items {
     padding: 60px 20px 0;
     height: 1145px;
 }
@@ -277,12 +277,20 @@ html {
     align-items: center;
 }
 
-.video-player {
+.video-player-wrapper {
     padding-top: 60px;
-    background-image: url(./assets/img/png/video-player.png);
+}
+
+.video-player {
     height: 705px;
     width: 1400px;
+    background-image: url(./assets/img/jpg/video-player.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.price-items {
+    padding: ;
+    height: 845px;
 }
