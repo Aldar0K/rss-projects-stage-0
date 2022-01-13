@@ -290,7 +290,50 @@ html {
     justify-content: center;
 }
 
+.section-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .price-items {
-    padding: ;
+    padding: 60px 20px 0;
     height: 845px;
+}
+
+.price-list {
+    display: flex;
+    gap: 25px;
+}
+
+.price-item {
+    gap: 20px;
+    height: 505px;
+    width: 450px;
+    border: #bdae82 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.gold-text {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: #BDAE82;
 }
