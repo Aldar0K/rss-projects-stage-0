@@ -14,7 +14,9 @@
 <body>
     <header class="header">
         <div class="container container-header">
-            <img class="icon icon-logo" src="./assets/img/svg/logo.svg" alt="logo">
+            <svg class="icon icon-logo">
+                <use xlink:href="./assets/img/svg/logo-spirte.svg#icon-logo"></use>
+            </svg>
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
@@ -26,12 +28,11 @@
             </nav>
             <div class="switch-language">
                 <a class="switch-gold" href="#">en</a>
-                <a class="switch-separator">/</a>
+                <span class="switch-separator">/</span>
                 <a class="switch-white" href="#">ru</a>
             </div>
         </div>
     </header>
-
 
     <main class="main">
         <div class="container container-main">
@@ -96,7 +97,9 @@
                 </wrapper>
                 <wrapper class="video-player-wrapper">
                     <div class="video-player">
-                        <img class="play-button" src="./assets/img/svg/Play_nohover.svg" alt="play-button"></img>
+                        <svg class="icon icon-play">
+                            <use xlink:href="./assets/img/svg/play-sprite.svg#play-button"></use>
+                        </svg>
                     </div>
                 </wrapper>
             </section>
@@ -128,14 +131,36 @@
                 </div>
             </section>
             <section class="section section-contacts" id="contacts">
-                <h2 class="section-title">Contacts</h2>
+                <div class="contacts-content">
+                    <span class="contacts-title">Contact me</span>
+                    <input type="email" class="contacts-email">
+                    <input type="tel" class="contacts-tel">
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <button class="button button-colored">Send message</button>
+                </div>
             </section>
         </div>
     </main>
 
-
     <footer class="footer">
-        <div class="container container-footer"></div>
+        <div class="container container-footer">
+            <div class="footer-data"><span>©</span><span>2022</span><a class="github-link" href="https://github.com/">github</a></div>
+            <div class="footer-rss-link"><a class="rss-link" href="https://rs.school/">Rolling Scopes School</a></div>
+            <div class="social-list">
+                <svg class="icon icon-socials">
+                    <use xlink:href="./assets/img/svg/inst-sprite.svg#inst-sprite"></use>
+                </svg>
+                <svg class="icon icon-socials">
+                    <use xlink:href="./assets/img/svg/fb-sprite.svg#fb-sprite"></use>
+                </svg>
+                <svg class="icon icon-socials">
+                    <use xlink:href="./assets/img/svg/tw-sprite.svg#tw-sprite"></use>
+                </svg>
+                <svg class="icon icon-socials">
+                    <use xlink:href="./assets/img/svg/pint-sprite.svg#pint-sprite"></use>
+                </svg>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

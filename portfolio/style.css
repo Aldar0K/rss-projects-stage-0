@@ -1,6 +1,6 @@
 /*Обнуление*/
 *{
-	padding: 0;
+	vadding: 0;
 	margin: 0;
 	border: 0;
 }
@@ -72,6 +72,29 @@ html {
     
 }
 
+.icon {
+    fill: white;
+}
+
+.icon-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-play {
+    width: 130px;
+    height: 130px;
+}
+
+.icon-socials {
+    width: 32px;
+    height: 32px;
+}
+
+.icon:hover {
+    fill: #bdae82;
+}
+
 .nav{
     margin-left: auto;
     margin-right: 15px;
@@ -89,6 +112,11 @@ html {
     line-height: 50px;
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #bdae82;
 }
 
 .switch-language {
@@ -291,6 +319,7 @@ html {
 }
 
 .section-price {
+    height: 845px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,4 +365,110 @@ h3 {
     line-height: 48px;
     text-align: center;
     color: #BDAE82;
+}
+
+.section-contacts {
+    height: 700px;
+    background: url(./assets/img/png/contacts.png);
+    background-size: auto 700px;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.contacts-content {
+    padding: 60px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-title {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    color: #BDAE82;
+}
+
+.contacts-email {
+    height: 50px;
+    width: 450px;
+}
+
+.contacts-email::placeholder {
+    font-family: inherit;
+    color: #bdae82;
+    font-size: 20px;
+}
+
+.contacts-tel {
+    height: 50px;
+    width: 450px;
+}
+
+.contacts-tel::placeholder {
+    font-family: inherit;
+    color: #bdae82;
+    font-size: 20px;
+}
+
+textarea {
+    height: 100px;
+    width: 450px;
+    resize: none
+}
+
+.container-footer {
+    padding: 0px;
+    background-color: black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-data {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    
+}
+
+.github-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    color: #bdae82;
+}
+
+.rss-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rss-link:hover {
+    color: #bdae82;
+}
+
+.social-list {
+    padding-right: 20px;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo {
+    height: 32px;
+    width: 32px;
+
 }
