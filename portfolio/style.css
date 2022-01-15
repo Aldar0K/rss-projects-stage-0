@@ -475,7 +475,7 @@ textarea {
     color: var(--color-gold);
 }
 
-.social-list {
+.footer-social-list {
     padding-right: 20px;
     height: 50px;
     display: flex;
