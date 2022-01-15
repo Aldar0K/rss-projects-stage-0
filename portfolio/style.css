@@ -240,9 +240,6 @@ h1 {
 .skills-items {
     padding: 60px 20px 0;
     width: 100%;
-}
-
-.skills-list {
     display: flex;
     justify-content: space-between;
 }
@@ -253,7 +250,33 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    background-position: center top;
+    gap: 20px;
+}
+
+.skills-item:nth-child(1) {
+    background-image: url('./assets/img/svg/camera\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 62px 50px;
+}
+
+.skills-item:nth-child(2) {
+    background-image: url('./assets/img/svg/video\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 62px 50px;
+}
+
+.skills-item:nth-child(3) {
+    background-image: url('./assets/img/svg/image\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 62px 50px;
+}
+
+.skills-item:nth-child(4) {
+    background-image: url('./assets/img/svg/mic\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 62px 50px;
 }
 
 .inter-normal-18 {
