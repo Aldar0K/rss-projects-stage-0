@@ -135,7 +135,7 @@ html {
 
 .switch-gold {
     text-decoration: none;
-    color: #var(--color-gold);
+    color: var(--color-gold);
 }
 
 .switch-white {
