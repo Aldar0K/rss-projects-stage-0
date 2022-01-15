@@ -132,11 +132,21 @@
             </section>
             <section class="section section-contacts" id="contacts">
                 <div class="contacts-content">
-                    <span class="contacts-title">Contact me</span>
-                    <input type="email" class="contacts-email">
-                    <input type="tel" class="contacts-tel">
-                    <textarea name="message" id="" cols="30" rows="10"></textarea>
-                    <button class="button button-colored">Send message</button>
+                    <form action="#" method="get">
+                        <div class="form-wrapper">
+                            <span class="contacts-title">Contact me</span>
+                            <div class="contacts-email">
+                                <input placeholder="E-mail" type="email" name="useremail">
+                            </div>
+                            <div class="contacts-tel">
+                                <input placeholder="Phone" type="tel" name="userphone">
+                            </div>
+                            <div class="contacts-text">
+                                <textarea placeholder="Message" name="usermessage"></textarea>
+                            </div>
+                            <button class="button button-colored" type="submit">Send message</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
