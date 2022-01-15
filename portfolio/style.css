@@ -73,7 +73,7 @@ html {
     height: 90px;
     background: url(assets/img/jpg/bg.jpg);
     background-repeat: no-repeat;
-    background-position: center 0;
+    background-position: top;
     display: flex;
     justify-content: flex-end;
     
@@ -238,12 +238,11 @@ h1 {
 }
 
 .skills-items {
-    padding: 0 20px;
+    padding: 60px 20px 0;
     width: 100%;
 }
 
 .skills-list {
-    padding-top: 60px;
     display: flex;
     justify-content: space-between;
 }
