@@ -217,6 +217,15 @@ h1 {
     align-items: center;
 }
 
+h2 {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--font2);
+    line-height: 80px;
+    color: var(--color-gold);
+}
+
 .section-title-wrapper {
     padding-top: 100px;
     width: 50%;
@@ -227,14 +236,8 @@ h1 {
 
 .section-title {
     padding: 0 20px;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: bold;
-    font-size: var(--font2);
-    line-height: 80px;
-    text-align: center;
-    color: var(--color-gold);
     background-color: black;
+    text-align: center;
 }
 
 .skills-items {
