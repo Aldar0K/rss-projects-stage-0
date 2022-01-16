@@ -400,7 +400,7 @@ h3 {
     color: var(--color-gold);
 }
 
-.section-contacts {
+.contacts {
     height: 700px;
     background: url(./assets/img/png/contacts.png);
     background-size: auto 700px;
@@ -410,7 +410,7 @@ h3 {
     align-content: flex-end;
 }
 
-.form {
+.contacts__form {
     padding-top: 60px;
     padding-right: 20px;
     display: flex;
@@ -427,30 +427,15 @@ h3 {
     color: var(--color-gold);
 }
 
-.contacts-email {
+.contacts-input {
     height: 50px;
     width: 450px;
 }
 
-input {
-    height: 100%;
-    width: 100%;
-}
-
-textarea {
-    height: 100%;
-    width: 100%;
-}
-
-.contacts-tel {
-    height: 50px;
-    width: 450px;
-}
-
-.contacts-text {
+.contacts-textarea {
     height: 100px;
     width: 450px;
-    resize: none
+    resize: none;
 }
 
 ::placeholder {
