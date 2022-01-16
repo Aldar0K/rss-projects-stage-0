@@ -1,2 +1,2 @@
-# aldar0k-JSFEPRESCHOOL
-Private repository for @aldar0k
+# aldar0K-JSFEPRESCHOOL
+Private repository for @aldar0K
