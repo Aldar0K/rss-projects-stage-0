@@ -410,12 +410,9 @@ h3 {
     align-content: flex-end;
 }
 
-.contacts-content {
+.form {
     padding-top: 60px;
     padding-right: 20px;
-}
-
-.form-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
