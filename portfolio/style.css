@@ -185,27 +185,27 @@ h1 {
     font-size: 20px;
 }
 
-.button-colored {
+.button_colored {
     background-color: var(--color-gold);
     transition: 0.3s;
 }
 
-.button-bordered {
+.button_bordered {
     color: var(--color-gold);
     background-color: black;
     border: var(--color-gold) 1px solid;
     transition: 0.3s;
 }
 
-.button-bordered:hover {
+.button_bordered:hover {
     color: white;
 }
 
-.button-colored:hover {
+.button_colored:hover {
     color: white;
 }
 
-.button-transparent {
+.button_transparent {
     background-color: transparent;
 }
 
