@@ -162,14 +162,14 @@ html {
     background-repeat: no-repeat;
 }
 
-.hero__content {
+.section-hero__content {
     height: 330px;
     width: 500px;
     padding-top: 160px;
     padding-left: 60px;
 }
 
-.hero__text {
+.section-hero__text {
     padding-bottom: 15px;
 }
 
@@ -243,14 +243,14 @@ h2 {
     text-align: center;
 }
 
-.skills__items {
+.section-skills__items {
     padding: 60px 20px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.skills__item {
+.section-skills__item {
     width: 320px;
     height: 240px;
     display: flex;
@@ -261,25 +261,25 @@ h2 {
     gap: 20px;
 }
 
-.skills__item:nth-child(1) {
+.section-skills__item:nth-child(1) {
     background-image: url('./assets/img/svg/camera\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.skills__item:nth-child(2) {
+.section-skills__item:nth-child(2) {
     background-image: url('./assets/img/svg/video\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.skills__item:nth-child(3) {
+.section-skills__item:nth-child(3) {
     background-image: url('./assets/img/svg/image\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.skills__item:nth-child(4) {
+.section-skills__item:nth-child(4) {
     background-image: url('./assets/img/svg/mic\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
@@ -313,12 +313,12 @@ h2 {
     align-items: center;
 }
 
-.portfolio__buttons {
+.section-portfolio__buttons {
     padding-top: 60px;
     display: flex;
 }
 
-.portfolio__items {
+.section-portfolio__items {
     padding-top: 60px;
     height: 1145px;
     display: flex;
@@ -326,7 +326,7 @@ h2 {
     gap: 25px;
 }
 
-.portfolio-item {
+.section-portfolio-item {
     height: 560px;
     width: 450px;
 }
@@ -339,11 +339,11 @@ h2 {
 }
 
 /* Чтобы отодвинуть элемент player вниз (в него вставлен задник) */
-.video__player-wrapper {
+.section-video__player-wrapper {
     padding-top: 60px;
 }
 
-.video__player {
+.section-video__player {
     height: 705px;
     width: 1400px;
     background-image: url(./assets/img/jpg/video-player.jpg);
@@ -360,14 +360,14 @@ h2 {
     justify-content: center;
 }
 
-.price__items {
+.section-price__items {
     padding: 60px 20px 0;
     height: 845px;
     display: flex;
     gap: 25px;
 }
 
-.price__item {
+.section-price__item {
     gap: 20px;
     height: 505px;
     width: 450px;
@@ -408,7 +408,7 @@ h3 {
     align-content: flex-end;
 }
 
-.contacts__form {
+.section-contacts__form {
     padding-top: 60px;
     padding-right: 20px;
     display: flex;
@@ -416,7 +416,7 @@ h3 {
     gap: 20px;
 }
 
-.contacts-title {
+.section-contacts-title {
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
@@ -425,12 +425,12 @@ h3 {
     color: var(--color-gold);
 }
 
-.contacts-input {
+.section-contacts__input {
     height: 50px;
     width: 450px;
 }
 
-.contacts-textarea {
+.section-contacts__textarea {
     height: 100px;
     width: 450px;
     resize: none;
