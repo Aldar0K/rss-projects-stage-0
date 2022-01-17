@@ -127,7 +127,9 @@ html {
     color: var(--color-gold);
 }
 
-.switch-language {
+.switch-lang{}
+
+.header__switch-lang {
     height: 50px;
     width: 70px;
     display: flex;
@@ -136,13 +138,11 @@ html {
     gap: 10px;
 }
 
-.switch-language_gold {
-    text-decoration: none;
+.switch-lang__en_gold {
     color: var(--color-gold);
 }
 
-.switch-language_white {
-    text-decoration: none;
+.switch-lang__ru_white {
     color: white;
 }
 
