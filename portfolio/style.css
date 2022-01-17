@@ -155,7 +155,7 @@ html {
     background-color: black;
 }
 
-.hero {
+.section-hero {
     height: 820px;
     background: url(./assets/img/jpg/bg.jpg);
     background-position: center -90px;
@@ -213,7 +213,7 @@ h1 {
     background-color: transparent;
 }
 
-.skills {
+.section-skills {
     height: 480px;
     display: flex;
     flex-direction: column;
@@ -305,7 +305,7 @@ h2 {
     color: #FFFFFF;
 }
 
-.portfolio {
+.section-portfolio {
     padding: 0 20px;
     height: 1500px;
     display: flex;
@@ -331,7 +331,7 @@ h2 {
     width: 450px;
 }
 
-.video {
+.section-video {
     height: 945px;
     display: flex;
     flex-direction: column;
@@ -352,7 +352,7 @@ h2 {
     justify-content: center;
 }
 
-.price {
+.section-price {
     height: 845px;
     display: flex;
     flex-direction: column;
@@ -398,7 +398,7 @@ h3 {
     color: var(--color-gold);
 }
 
-.contacts {
+.section-contacts {
     height: 700px;
     background: url(./assets/img/png/contacts.png);
     background-size: auto 700px;
