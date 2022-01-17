@@ -139,9 +139,14 @@ html {
 .lang-switcher__link {
     text-decoration: none;
     color: white;
+    transition: 0.3s;
 }
 
-.lang-switcher__link_colored {
+.lang-switcher__link_selected {
+    color: var(--color-gold);
+}
+
+.lang-switcher__link:hover {
     color: var(--color-gold);
 }
 
