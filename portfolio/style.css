@@ -155,21 +155,21 @@ html {
     background-color: black;
 }
 
-.section-hero {
+.hero {
     height: 820px;
     background: url(./assets/img/jpg/bg.jpg);
     background-position: center -90px;
     background-repeat: no-repeat;
 }
 
-.section-hero__content {
+.hero__content {
     height: 330px;
     width: 500px;
     padding-top: 160px;
     padding-left: 60px;
 }
 
-.section-hero__text {
+.hero__text {
     padding-bottom: 15px;
 }
 
@@ -213,7 +213,7 @@ h1 {
     background-color: transparent;
 }
 
-.section-skills {
+.skills {
     height: 480px;
     display: flex;
     flex-direction: column;
@@ -243,14 +243,14 @@ h2 {
     text-align: center;
 }
 
-.section-skills__items {
+.skills__items {
     padding: 60px 20px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.section-skills__item {
+.skills__item {
     width: 320px;
     height: 240px;
     display: flex;
@@ -261,25 +261,25 @@ h2 {
     gap: 20px;
 }
 
-.section-skills__item:nth-child(1) {
+.skills__item:nth-child(1) {
     background-image: url('./assets/img/svg/camera\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.section-skills__item:nth-child(2) {
+.skills__item:nth-child(2) {
     background-image: url('./assets/img/svg/video\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.section-skills__item:nth-child(3) {
+.skills__item:nth-child(3) {
     background-image: url('./assets/img/svg/image\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
 }
 
-.section-skills__item:nth-child(4) {
+.skills__item:nth-child(4) {
     background-image: url('./assets/img/svg/mic\ 1.svg');
     background-repeat: no-repeat;
     background-size: 62px 50px;
@@ -305,7 +305,7 @@ h2 {
     color: #FFFFFF;
 }
 
-.section-portfolio {
+.portfolio {
     padding: 0 20px;
     height: 1500px;
     display: flex;
@@ -313,12 +313,12 @@ h2 {
     align-items: center;
 }
 
-.section-portfolio__buttons {
+.portfolio__buttons {
     padding-top: 60px;
     display: flex;
 }
 
-.section-portfolio__items {
+.portfolio__items {
     padding-top: 60px;
     height: 1145px;
     display: flex;
@@ -326,12 +326,12 @@ h2 {
     gap: 25px;
 }
 
-.section-portfolio-item {
+.portfolio-item {
     height: 560px;
     width: 450px;
 }
 
-.section-video {
+.video {
     height: 945px;
     display: flex;
     flex-direction: column;
@@ -339,11 +339,11 @@ h2 {
 }
 
 /* Чтобы отодвинуть элемент player вниз (в него вставлен задник) */
-.section-video__player-wrapper {
+.video__player-wrapper {
     padding-top: 60px;
 }
 
-.section-video__player {
+.video__player {
     height: 705px;
     width: 1400px;
     background-image: url(./assets/img/jpg/video-player.jpg);
@@ -352,7 +352,7 @@ h2 {
     justify-content: center;
 }
 
-.section-price {
+.price {
     height: 845px;
     display: flex;
     flex-direction: column;
@@ -360,14 +360,14 @@ h2 {
     justify-content: center;
 }
 
-.section-price__items {
+.price__items {
     padding: 60px 20px 0;
     height: 845px;
     display: flex;
     gap: 25px;
 }
 
-.section-price__item {
+.price__item {
     gap: 20px;
     height: 505px;
     width: 450px;
@@ -398,7 +398,7 @@ h3 {
     color: var(--color-gold);
 }
 
-.section-contacts {
+.contacts {
     height: 700px;
     background: url(./assets/img/png/contacts.png);
     background-size: auto 700px;
@@ -408,7 +408,7 @@ h3 {
     align-content: flex-end;
 }
 
-.section-contacts__form {
+.contacts__form {
     padding-top: 60px;
     padding-right: 20px;
     display: flex;
@@ -416,7 +416,7 @@ h3 {
     gap: 20px;
 }
 
-.section-contacts-title {
+.contacts-title {
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
@@ -425,12 +425,12 @@ h3 {
     color: var(--color-gold);
 }
 
-.section-contacts__input {
+.contacts__input {
     height: 50px;
     width: 450px;
 }
 
-.section-contacts__textarea {
+.contacts__textarea {
     height: 100px;
     width: 450px;
     resize: none;
