@@ -509,3 +509,7 @@ h3 {
 a {
     display: flex;
 }
+
+.contacts__title {
+    padding-bottom: 20px;
+}
