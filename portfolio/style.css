@@ -171,6 +171,7 @@ html {
 
 .hero__text {
     padding: 10px 0 25px 0;
+    width: 470px;
     line-height: 40px;
 }
 
