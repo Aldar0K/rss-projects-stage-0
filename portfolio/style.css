@@ -431,22 +431,34 @@ h3 {
 .contacts__input {
     height: 50px;
     width: 450px;
-    background: transparent;
     background-color: rgba(0, 0, 0, 0.5);
-    border: var(--color-gold) solid 2px;
+    border: 2px solid var(--color-gold);
+}
+
+input {
+    padding-left: 20px;
+    font-family: inherit;
+    color: var(--color-gold);
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .contacts__textarea {
     height: 100px;
     width: 450px;
-    resize: none;
-    background: transparent;
     background-color: rgba(0, 0, 0, 0.5);
     border: var(--color-gold) solid 2px;
 }
 
+textarea {
+    padding: 5px 0 0 20px;
+    font-family: inherit;
+    color: var(--color-gold);
+    font-size: 20px;
+    line-height: 40px;
+}
+
 ::placeholder {
-    padding: 5px 0 5px 20px;
     font-family: inherit;
     color: var(--color-gold);
     font-size: 20px;
