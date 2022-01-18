@@ -1,1 +1,1 @@
-console.log('1)10;\n2)20;\n3)48;\n4)12;\n5)20;\nScore: 110 / 110');
+console.log('Score: 110 / 110');
