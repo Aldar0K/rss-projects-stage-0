@@ -109,6 +109,7 @@ h3 {
 .icon-play {
     width: 130px;
     height: 130px;
+    transition: all .3s;
 }
 
 .icon-socials {
