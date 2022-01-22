@@ -231,6 +231,7 @@ h1 {
 }
 
 .skills {
+    padding: 0 20px;
     height: 480px;
     display: flex;
     flex-direction: column;
@@ -446,19 +447,16 @@ h2 {
     padding-right: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-.contacts-title {
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: bold;
-    font-size: var(--font2);
-    line-height: 80px;
-    color: var(--color-gold);
+.contacts__title {
+    height: 80px;
+    width: 450px;
+    margin-bottom: 40px;
 }
 
 .contacts__input {
+    margin-bottom: 20px;
     height: 50px;
     width: 450px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -482,15 +480,11 @@ input:-webkit-autofill:active {
 }
 
 .contacts__textarea {
+    margin-bottom: 30px;
     height: 100px;
     width: 450px;
     background-color: rgba(0, 0, 0, 0.5);
     border: var(--color-gold) solid 2px;
-}
-
-.contacts__button {
-    margin-top: 10px;
-    position: relative;
 }
 
 textarea {
@@ -525,10 +519,6 @@ textarea {
     
 }
 
-.footer__rss {}
-
-.footer__socials {}
-
 .github-link {
     color: white;
     text-decoration: none;
@@ -556,13 +546,6 @@ textarea {
 
 }
 
-@media (max-width: 768px) {
-    :root {
-      --font1: 40px;
-      --font2: 32px;
-    }
-}
-
 .social-list {
     margin-right: 20px;
     height: 50px;
@@ -575,11 +558,6 @@ textarea {
 a {
     display: flex;
 }
-
-.contacts__title {
-    padding-bottom: 20px;
-}
-
 /* @media (max-width: 1440px) {
     .container {
         max-width: 768px;
@@ -588,4 +566,11 @@ a {
       justify-content: space-around;
     }
   } */
+
+/* @media (max-width: 768px) {
+    :root {
+      --font1: 40px;
+      --font2: 32px;
+    }
+} */
   
