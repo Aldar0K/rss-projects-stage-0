@@ -12,7 +12,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+nav,footer, main, header,aside{display: block;}
 
 html,body{
 	height: 100%;
@@ -37,12 +37,6 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-* {
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-}
-
 :root {
     --color-gold: #bdae82;
     --color-black: #000;
@@ -62,6 +56,13 @@ body {
     line-height: 50px;
     color: #FFFFFF;
     background: var(--color-black);
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
 }
 
 h3 {
