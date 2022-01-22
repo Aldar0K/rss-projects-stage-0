@@ -40,8 +40,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 :root {
     --color-gold: #bdae82;
     --color-black: #000;
-    --font1: 60px;
-    --font2: 40px;
+
+    --font-h1: 60px;
+    --font-h2: 40px;
+    --font-h3: 28px;
+    --font-body: 20px;
+}
+
+@media (max-width: 1440px) {
+    :root {
+      --font-h1: 32px;
+      --font-h2: 32px;
+      --font-body: 20px;
+    }
 }
 
 html {
@@ -52,7 +63,7 @@ body {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: var(--font-body);
     line-height: 50px;
     color: #FFFFFF;
     background: var(--color-black);
@@ -69,7 +80,7 @@ h3 {
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: var(--font-h3);
     line-height: 56px;
     text-align: center;
     color: #FFFFFF;
@@ -81,15 +92,28 @@ h3 {
     padding: 0 20px;
 }
 
+@media (max-width: 1440px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
 .header__container {
-    height: 90px;
-    padding: 0 20px;
+    max-height: 90px;
+    padding: 20px 20px;
+    width: 100%;
     background: url(assets/img/jpg/bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 1440px) {
+    .header__container {
+        padding: 20px 60px;
+    }
 }
 
 .icon {
@@ -170,19 +194,26 @@ h3 {
 }
 
 .hero {
+    padding: 160px 860px 330px 80px;
+    max-height: 820px;
     background: url(./assets/img/jpg/bg.jpg);
     background-size: 100%;
     background-position: center -90px;
     background-repeat: no-repeat;
 }
 
+@media (max-width: 1440px) {
+    .hero {
+        max-height: 500px;
+    }
+}
+
 .hero__content {
-    padding: 160px 0 330px 80px;
+    
 }
 
 .hero__text {
-    margin-top: 10px;
-    width: 470px;
+    margin: 10px 30px 0 0;
     line-height: 40px;
 }
 
@@ -195,7 +226,7 @@ h1 {
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
-    font-size: var(--font1);
+    font-size: var(--font-h1);
     line-height: 120px;
 }
 
@@ -232,8 +263,8 @@ h1 {
 }
 
 .skills {
-    padding: 0 20px;
-    height: 480px;
+    padding: 100px 20px 0 20px;
+    max-height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,13 +274,12 @@ h2 {
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
-    font-size: var(--font2);
+    font-size: var(--font-h2);
     line-height: 80px;
     color: var(--color-gold);
 }
 
 .section-title-wrapper {
-    margin-top: 100px;
     width: 50%;
     background-image: linear-gradient(to top, #000 39px, var(--color-gold) 39px, var(--color-gold) 41px, #000 41px);
     display: flex;
@@ -263,31 +293,34 @@ h2 {
 }
 
 .skills__content {
-    margin: 60px 20px 0;
-    width: 100%;
+    margin-top: 60px;
 }
 
 .skills__items {
     display: flex;
-    justify-content: space-between;
 }
 
 .skills__item {
+    margin-right: 40px;
+    padding-top: 100px;
     width: 320px;
     height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     background-position: center top;
 }
 
+.skills__item:last-child {
+    margin-right: 0;
+}
+
 .skills__title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .skills__text {
-    margin-bottom: 7px;
+    margin: 0 20px 7px 20px;
 }
 
 .skills__item:nth-child(1) {
@@ -335,8 +368,8 @@ h2 {
 }
 
 .portfolio {
-    padding: 0 20px;
-    height: 1500px;
+    padding: 100px 20px 0 20px;
+    max-height: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -361,7 +394,7 @@ h2 {
 }
 
 .video {
-    height: 945px;
+    padding: 100px 20px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,8 +415,7 @@ h2 {
 }
 
 .price {
-    padding: 0 20px;
-    height: 845px;
+    padding: 100px 20px 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -434,7 +466,6 @@ h2 {
 }
 
 .contacts {
-    height: 700px;
     background: url(./assets/img/png/contacts.png);
     background-size: auto 700px;
     background-position: center center;
@@ -450,8 +481,6 @@ h2 {
 }
 
 .contacts__title {
-    height: 80px;
-    width: 450px;
     margin-bottom: 40px;
 }
 
@@ -502,9 +531,8 @@ textarea {
 }
 
 .footer__container {
-    padding: 0 20px;
+    padding: 50px 20px;
     background-color: black;
-    height: 150px;
     display: flex;
     align-items: center;
 }
@@ -560,19 +588,3 @@ textarea {
 a {
     display: flex;
 }
-/* @media (max-width: 1440px) {
-    .container {
-        max-width: 768px;
-    }
-    .skills__items {
-      justify-content: space-around;
-    }
-  } */
-
-/* @media (max-width: 768px) {
-    :root {
-      --font1: 40px;
-      --font2: 32px;
-    }
-} */
-  
