@@ -511,7 +511,6 @@ textarea {
 
 .footer__data {
     padding-right: 13px;
-    margin-right: 414px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -530,7 +529,7 @@ textarea {
 }
 
 .footer__rss {
-    margin-right: 406px;
+    margin: 0 auto;
 }
 
 .rss-link {
