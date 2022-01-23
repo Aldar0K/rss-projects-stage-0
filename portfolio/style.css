@@ -45,8 +45,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     --font-h2: 40px;
     --font-h3: 28px;
     --font-body: 20px;
-
-    --line-height1: 36px;
 }
 
 @media (max-width: 1440px) {
@@ -84,6 +82,26 @@ h3 {
     font-weight: bold;
     font-size: var(--font-h3);
     line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.inter-normal-18 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.inter-bold-20 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
     text-align: center;
     color: #FFFFFF;
 }
@@ -289,13 +307,6 @@ h1 {
     align-items: center;
 }
 
-@media (max-width: 1440px) {
-    .skills {
-        padding: 80px 20px 0 20px;
-        max-height: 729px;
-    }
-}
-
 h2 {
     font-family: Merriweather;
     font-style: normal;
@@ -337,8 +348,6 @@ h2 {
     background-position: center top;
 }
 
-
-
 .skills__item:last-child {
     margin-right: 0;
 }
@@ -376,6 +385,13 @@ h2 {
 }
 
 @media (max-width: 1440px) {
+    .skills {
+        padding: 80px 20px 0 20px;
+        max-height: 729px;
+    }
+    a.inter-normal-18 {
+        line-height: 22px;
+    }
     .skills__content {
         margin-top: 45px;
     }
@@ -403,26 +419,6 @@ h2 {
     .skills__text {
         margin: 0 10px;
     }
-}
-
-.inter-normal-18 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: var(--line-height1);
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.inter-bold-20 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 40px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 .portfolio {
