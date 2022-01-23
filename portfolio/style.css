@@ -95,6 +95,7 @@ h3 {
 @media (max-width: 1440px) {
     .container {
         max-width: 768px;
+        width: calc(100% - 40px);
     }
 }
 
@@ -113,6 +114,10 @@ h3 {
 @media (max-width: 1440px) {
     .header__container {
         padding: 20px 60px;
+        background-position: -5px -30px;
+        background-size: auto 620px;
+        /* background-position: -5px -120px;
+        background-size: auto 620px; */
     }
 }
 
@@ -204,7 +209,10 @@ h3 {
 
 @media (max-width: 1440px) {
     .hero {
+        padding: 78px 318px 152px 60px;
         max-height: 500px;
+        background-position: -5px -120px;
+        background-size: auto 620px;
     }
 }
 
