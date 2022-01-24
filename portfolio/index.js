@@ -5,7 +5,7 @@ console.log('Score: 110 / 110');
 // Создаем переменные с классами, которые нужно менять.
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
-const menuLink = document.querySelector('.menu__link');
+const menuLinks = document.querySelectorAll('.menu__link');
 // Проверяем наличие необходимого класса.
 if (iconMenu) {
 // Создаем функцию, которая будем срабатывать при клике на иконку бургера, а при повторном нажатие будет возвращать исходное состояние.
@@ -24,20 +24,11 @@ if (iconMenu) {
     // iconMenu.addEventListener('mouseleave', () => {
     //     iconMenu.classList.toggle('background-gold')
     // })
-    menuBody.addEventListener('click', () => {
+// При нажатии на любую кнопку навигации, меню бургер будет закрываться.
+    menuLinks.forEach((link) => link.addEventListener('click', () => {
         document.body.classList.remove('body_lock');
         iconMenu.classList.remove('menu__icon_active');
         menuBody.classList.remove('menu__body_active');
-    })
+}))
 }
-// При нажатии на любую кнопку навигации, меню бургер будет закрываться.
-// if (iconMenu.classList.contains(menu__icon_active)) {
-//    for (let i = 0; i < 5; i++) {
-//         menuLink.addEventListener('click', () => {
-//             document.body.classList.remove('body_lock');
-//             iconMenu.classList.remove('menu__icon_active');
-//             menuBody.classList.remove('menu__body_active');
-//         })
-//     }
-// }
 // Конец меню бургер.
