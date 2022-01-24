@@ -151,6 +151,7 @@ h3 {
 @media (max-width: 1440px) {
     .header__container {
         padding: 20px 60px;
+        width: 768px;
         background-position: -5px -30px;
         background-size: auto 620px;
     }
@@ -348,6 +349,7 @@ h3 {
 }
 
 .hero {
+    margin: 0 auto;
     padding: 250px 860px 330px 80px;
     height: 910px;
     background: url(./assets/img/jpg/bg.jpg);
@@ -370,6 +372,7 @@ h3 {
     .hero {
         padding: 168px 318px 152px 60px;
         max-height: 590px;
+        width: 768px;
         background-position: -5px -30px;
         background-size: auto 620px;
     }
