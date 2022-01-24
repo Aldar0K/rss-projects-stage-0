@@ -69,6 +69,10 @@ body {
     background: var(--color-black);
 }
 
+body.body_lock {
+    overflow: hidden;
+}
+
 .wrapper {
     display: flex;
     min-height: 100%;
@@ -225,8 +229,115 @@ h3 {
     color: var(--color-gold);
 }
 
-.header__lang-switcher {
+.header__lang-switcher {}
 
+.header__menu {
+
+}
+
+.menu {
+
+}
+
+.menu__icon {
+    display: none;
+}
+
+.meny__body {
+
+}
+
+.menu__list {
+
+}
+
+.menu__link {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 73px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu__link:hover {
+    color: var(--color-gold);
+}
+
+@media (max-width: 1440px) {
+    .nav {
+        display: none;
+    }
+    .header__lang-switcher {
+        margin: 0 20px 0 auto ;
+    }
+    .menu__icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 28px;
+        cursor: pointer;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #FFFFFF;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+     .menu__icon 
+    }
+    .menu__icon::before {
+        top: 0;
+    }
+    .menu__icon::after {
+        bottom: 0;
+    }
+    .menu__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu__icon.menu__icon_active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu__icon.menu__icon_active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icon.menu__icon_active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    .menu__body {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 66.5%;
+        height: 100%;
+        background: var(--color-black);
+        padding: 134px 343.5px 463px 127px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu__body.menu__body_active {
+        right: 0;
+    }
+    .menu__list > li {
+        margin-bottom: 16px;
+    }
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+    .menu__link {}
 }
 
 .main__container {
@@ -234,7 +345,7 @@ h3 {
 }
 
 .hero {
-    padding: 160px 860px 330px 80px;
+    padding: 250px 860px 330px 80px;
     height: 910px;
     background: url(./assets/img/jpg/bg.jpg);
     background-size: 100%;
@@ -254,9 +365,9 @@ h3 {
 
 @media (max-width: 1440px) {
     .hero {
-        padding: 78px 318px 152px 60px;
-        max-height: 500px;
-        background-position: -5px -120px;
+        padding: 168px 318px 152px 60px;
+        max-height: 590px;
+        background-position: -5px -30px;
         background-size: auto 620px;
     }
     .hero__text {
