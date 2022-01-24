@@ -373,8 +373,8 @@ h3 {
         padding: 168px 318px 152px 60px;
         max-height: 590px;
         width: 768px;
-        background-position: -5px -30px;
         background-size: auto 620px;
+        background-position: -5px -30px;
     }
     .hero__text {
         padding: 0;
@@ -531,7 +531,7 @@ h2 {
     }
     .skills__items {
         max-height: 520px;
-        padding-left: 40px;
+        padding-left: 30px;
         display: flex;
         flex-wrap: wrap;
         /* justify-content: space-around; */
@@ -796,6 +796,7 @@ h2 {
     .contacts {
         padding: 47px 0 111px;
         height: 600px;
+        width: 768px;
         background: url(./assets/img/jpg/contacts.jpg);
         background-size: auto 600px;
         background-position: center center;
