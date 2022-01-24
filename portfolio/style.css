@@ -119,10 +119,23 @@ h3 {
     }
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* background: url(assets/img/jpg/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top; */
+}
+
 .header__container {
     max-height: 90px;
+    width: 1440px;
+    margin: 0 auto;
     padding: 20px 20px;
-    width: 100%;
     background: url(assets/img/jpg/bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -212,16 +225,20 @@ h3 {
     color: var(--color-gold);
 }
 
+.header__lang-switcher {
+
+}
+
 .main__container {
     padding: 0px;
 }
 
 .hero {
     padding: 160px 860px 330px 80px;
-    max-height: 820px;
+    height: 910px;
     background: url(./assets/img/jpg/bg.jpg);
     background-size: 100%;
-    background-position: center -90px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
