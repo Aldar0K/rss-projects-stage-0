@@ -1,1 +1,1 @@
-console.log('Score: 110 / 110');
+console.log('Score: 75 / 75');
