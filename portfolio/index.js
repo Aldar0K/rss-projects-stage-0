@@ -10,8 +10,9 @@ const menuLinks = document.querySelectorAll('.menu__link');
 if (iconMenu) {
 // Создаем функцию, которая будем срабатывать при клике на иконку бургера, а при повторном нажатие будет возвращать исходное состояние.
     iconMenu.addEventListener('click', () => {
-// Во-первых, функция будет делать блок body неактивным.
+// Во-первых, функция будет делать блок body неактивным и добавлять затенение для заднего фона.
         document.body.classList.toggle('body_lock');
+        document.body.classList.toggle('body_shadow');
 // Во-вторых, функция меняет иконку меню на крестик.
         iconMenu.classList.toggle('menu__icon_active');
 // В-третьих, функция добавляет выезжающее меню.
