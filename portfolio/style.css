@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     --font-body: 20px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     :root {
       --font-h1: 32px;
       --font-h2: 32px;
@@ -133,7 +133,7 @@ h3 {
     padding: 0 20px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .container {
         max-width: 768px;
     }
@@ -161,10 +161,10 @@ h3 {
     align-items: center;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .header__container {
         padding: 20px 60px;
-        width: 768px;
+        /* width: 768px; */
         background-position: -5px -30px;
         background-size: auto 620px;
     }
@@ -275,7 +275,7 @@ h3 {
     color: var(--color-gold);
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .nav {
         display: none;
     }
@@ -367,13 +367,13 @@ h3 {
 
 .hero {
     margin: 0 auto;
-    height: 910px;
+    min-height: 910px;
     display: flex;
     align-items: center;
-    background: url(./assets/img/jpg/bg.jpg);
-    background-size: 100%;
-    /* background-position: center; */
-    background-repeat: no-repeat;
+    /* background: url(./assets/img/jpg/bg.jpg);
+    background-repeat: no-repeat; */
+
+    background: url(./assets/img/jpg/bg.jpg) 50% 50%/cover no-repeat;
 }
 
 .hero__content {
@@ -394,11 +394,17 @@ h3 {
     margin-bottom: 84px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 1200px) {
+    .hero {
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 768px) {
     .hero {
         /* padding: 168px 318px 152px 60px; */
         /* margin: 0 auto; */
-        height: 590px;
+        min-height: 590px;
         max-width: 768px;
         background-size: auto 620px;
         background-position: -5px -30px;
@@ -422,7 +428,7 @@ h3 {
     }
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     h1 {
         line-height: 64px;
     }
@@ -461,7 +467,7 @@ h3 {
 }
 
 .skills {
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
     max-height: 480px;
     display: flex;
     flex-direction: column;
@@ -482,27 +488,29 @@ h3 {
 }
 
 .skills__content {
-    margin-top: 60px;
+    margin: 60px -20px 0;
 }
 
 .skills__items {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .skills__item {
-    margin-right: 40px;
-    padding-top: 100px;
-    width: 320px;
-    height: 240px;
+    padding: 100px 20px 10px;
+    text-align: center;
+    /* width: 320px;
+    height: 240px; */
     display: flex;
     flex-direction: column;
+    flex-basis: 25%;
     align-items: center;
     background-position: center top;
 }
 
-.skills__item:last-child {
+/* .skills__item:last-child {
     margin-right: 0;
-}
+} */
 
 .skills__title {
     margin-bottom: 20px;
@@ -536,7 +544,23 @@ h3 {
     background-size: 62px 50px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 1024px) {
+    .skills {
+        padding-top: 80px;
+        max-height: 724px;
+    }
+    .skills__content {
+        margin: 45px 20px 0;
+    }
+    .skills__items {
+    }
+    .skills__item {
+        padding: 80px 22px 74px;
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 768px) {
     .skills {
         padding: 80px 20px 0 20px;
         max-height: 729px;
@@ -545,21 +569,18 @@ h3 {
         line-height: 22px;
     }
     .skills__content {
-        margin-top: 45px;
+        margin-top: 44px;
     }
     .skills__items {
         max-height: 520px;
-        padding-left: 30px;
         display: flex;
         flex-wrap: wrap;
         /* justify-content: space-around; */
-        gap: 40px
     }
     .skills__item {
-        margin: 0;
-        padding-top: 80px;
-        width: 300px;
-        height: 224px;
+        padding: 77px 22px 90px;
+        /* width: 300px;
+        height: 224px; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -575,7 +596,7 @@ h3 {
 
 .portfolio {
     padding: 100px 20px 0 20px;
-    max-height: 1500px;
+    min-height: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -584,13 +605,17 @@ h3 {
 .portfolio__buttons {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
 }
 
 .portfolio__items {
     margin-top: 60px;
-    height: 1145px;
+    /* height: 1145px; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 
@@ -599,9 +624,15 @@ h3 {
     width: 450px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 1024px) {
+    .portfolio__buttons {
+        margin: 60px auto 0;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
     .portfolio {
-        margin-top: 40px;
         padding: 80px 0 0;
         max-height: 3870px;
         display: flex;
@@ -635,7 +666,7 @@ h3 {
 }
 
 .video {
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -655,7 +686,13 @@ h3 {
     justify-content: center;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 1200px) {
+    .video {
+        padding: 80px 20px 0x;
+    }
+}
+
+@media (max-width: 768px) {
     .video {
         padding: 80px 0;
         max-height: 628px;
@@ -693,8 +730,10 @@ h3 {
 
 .price__items {
     margin-top: 60px;
-    height: 505px;
+    /* height: 505px; */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 
@@ -735,7 +774,7 @@ h3 {
     margin-top: 21px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .price {
         padding: 80px 0;
         height: 1905px;
@@ -810,7 +849,7 @@ h3 {
     border: var(--color-gold) solid 2px;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .contacts {
         padding: 47px 0 111px;
         height: 600px;
@@ -887,7 +926,7 @@ textarea {
 }
 
 .footer__data {
-    padding-right: 13px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -938,24 +977,26 @@ a {
     display: flex;
 }
 
-@media (max-width: 808px) {
+@media (max-width: 768px) {
     .footer__container {
         padding: 10px 0;
         height: 190px;
         background-color: black;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         /* align-items: center; */
         /* justify-content: center; */
     }
     .footer__data {
+        line-height: 40px;
         display: flex;
         justify-content: center;
         align-content: center;
         gap: 20px;
-        
     }
     .github-link {
+        line-height: 40px;
         color: white;
         text-decoration: none;
         transition: 0.3s;
