@@ -35,12 +35,27 @@ if (iconMenu) {
 
 
 // Смена изображений в секции Portfolio
+const portfolioButtons = document.querySelector('.portfolio__buttons')
 const portfolioButton = document.querySelector('.portfolio__button');
-const portfolioImage = document.querySelector('.portfolio-item');
+const portfolioImage = document.querySelectorAll('.portfolio__image');
 
-portfolioButton.addEventListener('click', () => {
-    portfolioImage.src = './assets/img/autum/1.jpg'
-});
+// portfolioButton.addEventListener('click', () => {
+//     portfolioImage.forEach((img, index) => img.src = `./assets/img/winter/${index + 1}.jpg`);
+// });
 
+function changeImage(event) {
+    if(event.target.classList.contains('portfolio__button') && event.target.dataset.season === "winter") {
+        portfolioImage.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+    }
+    if(event.target.classList.contains('portfolio__button') && event.target.dataset.season === "spring") {
+        portfolioImage.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+    }
+    if(event.target.classList.contains('portfolio__button') && event.target.dataset.season === "summer") {
+        portfolioImage.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+    }
+    if(event.target.classList.contains('portfolio__button') && event.target.dataset.season === "autumn") {
+        portfolioImage.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+    }
+}
 
-
+portfolioButtons.addEventListener('click', changeImage);

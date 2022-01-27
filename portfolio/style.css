@@ -619,7 +619,7 @@ h3 {
     gap: 25px;
 }
 
-.portfolio-item {
+.portfolio__item {
     height: 560px;
     width: 450px;
 }
@@ -659,7 +659,7 @@ h3 {
         gap: 25px;
     }
     
-    .portfolio-item {
+    .portfolio__item {
         height: 560px;
         width: 450px;
     }
