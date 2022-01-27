@@ -1,7 +1,7 @@
 // Вывод в консоль самооценки по заданию.
 console.log('Score: 75 / 75');
 
-// Начало меню бургер.
+// Меню бургер.
 // Создаем переменные с классами, которые нужно менять.
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
@@ -32,4 +32,15 @@ if (iconMenu) {
         menuBody.classList.remove('menu__body_active');
 }))
 }
-// Конец меню бургер.
+
+
+// Смена изображений в секции Portfolio
+const portfolioButton = document.querySelector('.portfolio__button');
+const portfolioImage = document.querySelector('.portfolio-item');
+
+portfolioButton.addEventListener('click', () => {
+    portfolioImage.src = './assets/img/autum/1.jpg'
+});
+
+
+
