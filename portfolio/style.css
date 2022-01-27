@@ -665,6 +665,11 @@ h3 {
     }
 }
 
+.active {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+}
+
 .video {
     padding: 100px 20px 0;
     display: flex;

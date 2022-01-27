@@ -34,9 +34,9 @@ if (iconMenu) {
 }
 
 
-// Смена изображений в секции Portfolio
+// Смена изображений в секции Portfolio.
 const portfolioButtons = document.querySelector('.portfolio__buttons')
-const portfolioButton = document.querySelector('.portfolio__button');
+const portfolioButton = document.querySelectorAll('.portfolio__button');
 const portfolioImage = document.querySelectorAll('.portfolio__image');
 
 // portfolioButton.addEventListener('click', () => {
@@ -59,3 +59,25 @@ function changeImage(event) {
 }
 
 portfolioButtons.addEventListener('click', changeImage);
+
+// Кеширование изорбажений.
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
+
+function preloadImages() {
+    seasons.forEach(season => {
+        for (let i = 1; i <= 6; i++) {
+            const img = new Image();
+            img.src = `./assets/img/${season}/${i}.jpg`;
+        }
+    });
+}
+
+preloadImages();
+
+// Функция которая добавляет класс active элементу, на котором произошло событие, а также удаляет этот класс у других подобных элементов.
+function changeClassActive(event) {
+    portfolioButton.forEach(button => button.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+portfolioButtons.addEventListener('click', changeClassActive);
