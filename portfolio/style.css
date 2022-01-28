@@ -187,8 +187,12 @@ h3 {
 }
 
 .icon-play {
-    width: 130px;
-    height: 130px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
     transition: all .3s;
 }
 
@@ -303,9 +307,15 @@ h3 {
         transition: all 0.3s ease 0s;
         background-color: #FFFFFF;
     }
-    /* .menu__icon span:hover {
+    .menu__icon span:hover {
         background-color: var(--color-gold);
-    } */
+    }
+    .menu__icon:hover:before {
+        background-color: var(--color-gold);
+    }
+    .menu__icon:hover::after {
+        background-color: var(--color-gold);
+    }
     .menu__icon::before,
     .menu__icon::after {
         content: "";
@@ -680,12 +690,16 @@ h3 {
 /* Чтобы отодвинуть элемент player вниз (в него вставлен задник) */
 .video__player-wrapper {
     margin-top: 60px;
+    width: 100%;
+    position: relative;
 }
 
 .video__player {
-    height: 705px;
-    width: 1400px;
-    background-image: url(./assets/img/jpg/video-player.jpg);
+    padding-bottom: 50%;
+    /* height: 705px;
+    width: 1400px; */
+    /* background-image: url(./assets/img/jpg/video-player.jpg); */
+    background: url(./assets/img/jpg/video-player.jpg) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -720,6 +734,7 @@ h3 {
         justify-content: center;
     }
     .icon-play {
+
         width: 75px;
         height: 75px;
         transition: all .3s;
