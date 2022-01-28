@@ -236,7 +236,7 @@ h3 {
     transition: 0.3s;
 }
 
-.lang-switcher__link_selected {
+.selected {
     color: var(--color-gold);
 }
 

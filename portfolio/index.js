@@ -86,9 +86,6 @@ function changeClassActive(event) {
 portfolioButtons.addEventListener('click', changeClassActive);
 
 // Функция перевода страницы на русский и английский
-
-// console.log(textBlocks);
-
 function getTranslate(lang) {
     const textBlocks = document.querySelectorAll('[data-i18]');
 
@@ -112,3 +109,14 @@ const langSwitcherEN = document.querySelector('.lang-switcher-en');
 // Функция getTranslate применяется при нажатии на соотвествующую кнопку.
 langSwitcherRU.addEventListener('click', () => getTranslate('ru'));
 langSwitcherEN.addEventListener('click', () => getTranslate('en'));
+
+// Переключение цвета для активного языка.
+function changeClassSelected(event) {
+    langSwitcherRU.classList.remove('selected');
+    langSwitcherEN.classList.remove('selected');
+    
+    event.target.classList.add('selected');
+}
+
+langSwitcherRU.addEventListener('click', changeClassSelected);
+langSwitcherEN.addEventListener('click', changeClassSelected);
