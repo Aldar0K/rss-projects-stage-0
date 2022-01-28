@@ -773,10 +773,7 @@ h3 {
 
 .price__subtitle {
     margin-top: 21px;
-}
-
-.price__text {
-    margin-top: 21px;
+    margin-bottom: 21px;
 }
 
 @media (max-width: 768px) {
@@ -812,9 +809,6 @@ h3 {
         margin-top: 0;
     }
     .price__subtitle {
-        margin-top: 20px;
-    }
-    .price__text {
         margin-top: 20px;
     }
 }

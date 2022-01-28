@@ -1,3 +1,6 @@
+// Импорт объекта с разными языками из файла tanslate.js
+import i18Obj from './translate.js';
+
 // Вывод в консоль самооценки по заданию.
 console.log('Score: 75 / 75');
 
