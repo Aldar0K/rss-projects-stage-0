@@ -81,7 +81,7 @@ const i18Obj = {
       'order': 'Заказать съемку',
       'contact-me': 'Свяжитесь со мной',
       'send-message': 'Отправить',
-      'price-title-1': 'Стандартный пакет',
+      'price-title-1': 'Стандартный',
       'price-title-2': 'Премиум',
       'price-title-3': 'Золотой',
     }

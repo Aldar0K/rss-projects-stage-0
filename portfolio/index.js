@@ -84,3 +84,31 @@ function changeClassActive(event) {
 }
 
 portfolioButtons.addEventListener('click', changeClassActive);
+
+// Функция перевода страницы на русский и английский
+
+// console.log(textBlocks);
+
+function getTranslate(lang) {
+    const textBlocks = document.querySelectorAll('[data-i18]');
+
+    textBlocks.forEach(currentElement => {
+        if (currentElement.textContent === i18Obj[lang][currentElement.dataset.i18]) {
+        } else {
+            currentElement.textContent = i18Obj[lang][currentElement.dataset.i18];
+        }
+
+        if (currentElement.placeholder) {
+            currentElement.placeholder = i18Obj[lang][currentElement.dataset.i18];
+            currentElement.textContent = '';
+          }
+    })
+}
+
+// Вводим новые переменные для кнопок смены языков.
+const langSwitcherRU = document.querySelector('.lang-switcher-ru');
+const langSwitcherEN = document.querySelector('.lang-switcher-en');
+
+// Функция getTranslate применяется при нажатии на соотвествующую кнопку.
+langSwitcherRU.addEventListener('click', () => getTranslate('ru'));
+langSwitcherEN.addEventListener('click', () => getTranslate('en'));
