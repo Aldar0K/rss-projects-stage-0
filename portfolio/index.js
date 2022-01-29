@@ -9,6 +9,7 @@ console.log('Score: 75 / 75');
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 const menuLinks = document.querySelectorAll('.menu__link');
+// const menuSpan = document.querySelector('.munu__span')
 // Проверяем наличие необходимого класса.
 if (iconMenu) {
 // Создаем функцию, которая будем срабатывать при клике на иконку бургера, а при повторном нажатие будет возвращать исходное состояние.
@@ -34,8 +35,16 @@ if (iconMenu) {
         iconMenu.classList.remove('menu__icon_active');
         menuBody.classList.remove('menu__body_active');
 }))
+// Переключение цвета для меню бургер.
+// iconMenu.addEventListener('mouseenter', () => {
+//     console.log('mouseenter')
+//     menuSpan.classList.toggle('background-gold');
+// })
+// iconMenu.addEventListener('mouseleave', () => {
+//     console.log('mouseleave')
+//     menuSpan.classList.toggle('background-gold');
+// })
 }
-
 
 // Смена изображений в секции Portfolio.
 const portfolioButtons = document.querySelector('.portfolio__buttons')

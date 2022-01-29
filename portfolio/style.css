@@ -41,6 +41,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     --color-gold: #bdae82;
     --color-black: #000;
 
+    --body-color: #000;
+    --text-color: #fff;
+    --hover-color: #fff;
+
     --font-h1: 60px;
     --font-h2: 40px;
     --font-h3: 28px;
@@ -140,7 +144,8 @@ h3 {
 }
 
 .header {
-    position: fixed;
+    position: absolute;
+    /* position: fixed; */
     z-index: 100;
     top: 0;
     left: 0;
