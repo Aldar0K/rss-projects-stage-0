@@ -374,6 +374,26 @@ h3 {
     background-color: var(--color-gold);
 }
 
+.header__theme-switcher_theme-night {
+    display: none;
+    margin-left: 30px;
+    max-width: 40px;
+    max-height: 40px;
+    transition: all 0.3s;
+}
+
+.header__theme-switcher_theme-white {
+    display: none;
+    margin-left: 30px;
+    max-width: 45px;
+    max-height: 45px;
+    transition: all 0.3s;
+}
+
+.theme_active {
+    display: block;
+}
+
 .main__container {
     padding: 0px;
     max-width: 1440px;
@@ -430,6 +450,9 @@ h3 {
         height: 287px;
         padding: 0 60px;
     }
+    h1 {
+        line-height: 64px;
+    }
     .hero__title {
         margin-top: 16px;
         margin-bottom: 20px;
@@ -442,11 +465,11 @@ h3 {
     .hero__button {
         margin-bottom: 0;
     }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        line-height: 64px;
+    .header__theme-switcher_theme-night {
+        margin-right: 30px;
+    }
+    .header__theme-switcher_theme-white {
+        margin-right: 30px;
     }
 }
 

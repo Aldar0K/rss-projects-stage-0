@@ -129,3 +129,18 @@ function changeClassSelected(event) {
 
 langSwitcherRU.addEventListener('click', changeClassSelected);
 langSwitcherEN.addEventListener('click', changeClassSelected);
+
+
+// Кнопки для переключения активной темы
+const themeButtonNight = document.querySelector('.header__theme-switcher_theme-night');
+const themeButtonWhite = document.querySelector('.header__theme-switcher_theme-white');
+
+themeButtonNight.addEventListener('click', () => {
+    themeButtonNight.classList.remove('theme_active');
+    themeButtonWhite.classList.add('theme_active');
+});
+themeButtonWhite.addEventListener('click', () => {
+    themeButtonWhite.classList.remove('theme_active');
+    themeButtonNight.classList.add('theme_active');
+});
+
