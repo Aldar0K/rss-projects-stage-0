@@ -191,6 +191,7 @@ h3 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    max-width: 130px;
     width: 20%;
     height: 20%;
     transition: all .3s;
@@ -832,6 +833,7 @@ h3 {
     background: url(./assets/img/jpg/contacts.jpg);
     background-size: auto 700px;
     background-position: center center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
@@ -861,6 +863,13 @@ h3 {
     width: 450px;
     background-color: rgba(0, 0, 0, 0.5);
     border: var(--color-gold) solid 2px;
+}
+
+@media (max-width: 1200px) {
+    .contacts {
+        background-size: auto 600px;
+        background-repeat: no-repeat;
+    }
 }
 
 @media (max-width: 768px) {

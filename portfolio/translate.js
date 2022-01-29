@@ -41,6 +41,9 @@ const i18Obj = {
       'price-title-1': 'Standard',
       'price-title-2': 'Premium',
       'price-title-3': 'Gold',
+      'input-1': 'E-mail',
+      'input-2': 'Phone',
+      'textarea-1': 'Message',
     },
     'ru': {
       'skills': 'Навыки',
@@ -84,6 +87,9 @@ const i18Obj = {
       'price-title-1': 'Стандартный',
       'price-title-2': 'Премиум',
       'price-title-3': 'Золотой',
+      'input-1': 'Электронная почта',
+      'input-2': 'Телефон',
+      'textarea-1': 'Ваше сообщение',
     }
   }
 
