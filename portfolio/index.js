@@ -1,5 +1,6 @@
 // Импорт объекта с разными языками из файла tanslate.js
 import i18Obj from './translate.js';
+import lightThemeArr from './light-theme.js';
 
 // Вывод в консоль самооценки по заданию.
 console.log('Score: 75 / 75');
@@ -90,6 +91,9 @@ preloadImages();
 function changeClassActive(event) {
     portfolioButton.forEach(button => button.classList.remove('active'));
     event.target.classList.add('active');
+
+    portfolioButton.forEach(button => button.classList.remove('active_light-theme'));
+    event.target.classList.add('active_light-theme');
 }
 
 portfolioButtons.addEventListener('click', changeClassActive);
@@ -119,7 +123,7 @@ const langSwitcherEN = document.querySelector('.lang-switcher-en');
 langSwitcherRU.addEventListener('click', () => getTranslate('ru'));
 langSwitcherEN.addEventListener('click', () => getTranslate('en'));
 
-// Переключение цвета для активного языка.
+// Переключение цвета кнопок при смене языка.
 function changeClassSelected(event) {
     langSwitcherRU.classList.remove('selected');
     langSwitcherEN.classList.remove('selected');
@@ -131,16 +135,72 @@ langSwitcherRU.addEventListener('click', changeClassSelected);
 langSwitcherEN.addEventListener('click', changeClassSelected);
 
 
-// Кнопки для переключения активной темы
-const themeButtonNight = document.querySelector('.header__theme-switcher_theme-night');
-const themeButtonWhite = document.querySelector('.header__theme-switcher_theme-white');
+// Кнопки для переключения темы.
+const themeButtonDark = document.querySelector('.theme__dark');
+const themeButtonLight = document.querySelector('.theme__light');
 
-themeButtonNight.addEventListener('click', () => {
-    themeButtonNight.classList.remove('theme_active');
-    themeButtonWhite.classList.add('theme_active');
+themeButtonDark.addEventListener('click', () => {
+    themeButtonDark.classList.remove('theme-active');
+    themeButtonLight.classList.add('theme-active');
 });
-themeButtonWhite.addEventListener('click', () => {
-    themeButtonWhite.classList.remove('theme_active');
-    themeButtonNight.classList.add('theme_active');
+themeButtonLight.addEventListener('click', () => {
+    themeButtonLight.classList.remove('theme-active');
+    themeButtonDark.classList.add('theme-active');
 });
 
+// Переключение темы.
+// const themeButton = document.querySelector('theme');
+const sectionSkills = document.querySelector('.skills');
+const sectionPortfolio = document.querySelector('.portfolio');
+const sectionVideo = document.querySelector('.video');
+const sectionPrice = document.querySelector('.price');
+const sectionTitles = document.querySelectorAll('.section-title');
+const sectionTitleWrappers = document.querySelectorAll('.section-title-wrapper');
+const buttonsBordered = document.querySelectorAll('.button_bordered');
+const buttonActive = document.querySelector('.active');
+
+function changeTheme(event) {
+    if (themeButtonDark.classList.contains('theme-active')) {}
+    else {
+        sectionSkills.classList.add('light-theme');
+        sectionPortfolio.classList.add('light-theme');
+        sectionVideo.classList.add('light-theme');
+        sectionPrice.classList.add('light-theme');
+        sectionTitles.forEach(element => {
+            element.classList.add('section-title_light-theme');
+        })
+        sectionTitleWrappers.forEach(element => {
+            element.classList.add('section-title-wrapper_light-theme');
+        })
+        buttonsBordered.forEach(element => {
+            element.classList.add('button_bordered_light-teme');
+        })
+        buttonActive.classList.add('active_light-theme')
+    }
+    if (themeButtonLight.classList.contains('theme-active')) {}
+    else {
+        sectionSkills.classList.remove('light-theme');
+        sectionPortfolio.classList.remove('light-theme');
+        sectionVideo.classList.remove('light-theme');
+        sectionPrice.classList.remove('light-theme');
+        sectionTitles.forEach(element => {
+            element.classList.remove('section-title_light-theme');
+        })
+        sectionTitleWrappers.forEach(element => {
+            element.classList.remove('section-title-wrapper_light-theme');
+        })
+        buttonsBordered.forEach(element => {
+            element.classList.remove('button_bordered_light-teme');
+        })
+        buttonActive.classList.remove('active_light-theme')
+    }
+    // Проверка, которая убирает выделение с кнопки autumn при переключении тем.
+    buttonsBordered.forEach(element => {
+        if (!element.classList.contains('active')) {
+            element.classList.remove('active_light-theme');
+        }
+    })
+}
+
+themeButtonDark.addEventListener('click', changeTheme);
+themeButtonLight.addEventListener('click', changeTheme);

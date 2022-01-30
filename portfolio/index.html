@@ -34,13 +34,15 @@
                     <li><a class="lang-switcher__link lang-switcher-ru" href="#">ru</a></li>
                 </ul>
                 <!-- <div class="theme-switcher header__theme-switcher"></div> -->
-                <svg class="icon header__theme-switcher_theme-night theme_active">
-                    <use xlink:href="./assets/img/svg/carbon_moon-sprite.svg#carbon_moon"></use>
-                </svg>
-                <svg class="icon header__theme-switcher_theme-white">
-                    <use xlink:href="./assets/img/svg/carbon_sun-sprite.svg#carbon_sun"></use>
-                </svg>
-                <div class="menu header__menu">
+                <button class="header__theme theme" type="button">
+                    <svg class="icon theme__dark theme-active" width="41" height="40">
+                        <use xlink:href="./assets/img/svg/carbon_moon-sprite.svg#theme-dark"></use>
+                    </svg>
+                    <svg class="icon theme__light" width="45" height="45">
+                        <use xlink:href="./assets/img/svg/carbon_sun-sprite.svg#theme-light"></use>
+                    </svg>
+                </button>
+                <div class="header__menu menu">
                     <div class="menu__icon">
                         <span class="munu__span"></span>
                     </div>

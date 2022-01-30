@@ -87,7 +87,7 @@ const i18Obj = {
       'price-title-1': 'Стандартный',
       'price-title-2': 'Премиум',
       'price-title-3': 'Золотой',
-      'input-1': 'Электронная почта',
+      'input-1': 'E-mail',
       'input-2': 'Телефон',
       'textarea-1': 'Ваше сообщение',
     }
