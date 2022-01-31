@@ -103,6 +103,9 @@ function changeClassActive(event) {
 
 portfolioButtons.addEventListener('click', changeClassActive);
 
+// Значение lang по умолчанию 'en'
+let currentLang = 'en';
+
 // Функция перевода страницы на русский и английский
 function getTranslate(lang) {
     const textBlocks = document.querySelectorAll('[data-i18]');
@@ -118,6 +121,8 @@ function getTranslate(lang) {
             currentElement.textContent = '';
           }
     })
+    currentLang = lang;
+    console.log(`Текущий язык сайта: ${currentLang}`);
 }
 
 // Вводим новые переменные для кнопок смены языков.
@@ -153,6 +158,9 @@ themeButtonLight.addEventListener('click', () => {
     themeButtonDark.classList.add('theme-active');
 });
 
+// Значение theme по умолчанию 'dark'
+let currentTheme = 'dark';
+
 // Переключение темы.
 // const themeButton = document.querySelector('theme');
 const sectionSkills = document.querySelector('.skills');
@@ -164,8 +172,8 @@ const sectionTitleWrappers = document.querySelectorAll('.section-title-wrapper')
 const buttonsBordered = document.querySelectorAll('.button_bordered');
 const buttonActive = document.querySelector('.active')
 
-function changeTheme(event) {
-    if (themeButtonDark.classList.contains('theme-active')) {}
+function changeTheme(theme) {
+    if (theme === 'dark') {}
     else {
         sectionSkills.classList.add('light-theme');
         sectionPortfolio.classList.add('light-theme');
@@ -182,8 +190,11 @@ function changeTheme(event) {
             element.classList.add('button_bordered_light-teme');
         })
         buttonActive.classList.add('active_light-theme')
+
+        currentTheme = 'light';
+        console.log(`Текущая тема: ${currentTheme}`);
     }
-    if (themeButtonLight.classList.contains('theme-active')) {}
+    if (theme === 'light') {}
     else {
         sectionSkills.classList.remove('light-theme');
         sectionPortfolio.classList.remove('light-theme');
@@ -200,6 +211,9 @@ function changeTheme(event) {
             element.classList.remove('button_bordered_light-teme');
         })
         buttonActive.classList.remove('active_light-theme')
+
+        currentTheme = 'dark';
+        console.log(`Текущая тема: ${currentTheme}`);
     }
     // Проверка, которая убирает выделение с кнопки autumn при переключении тем.
     buttonsBordered.forEach(element => {
@@ -209,5 +223,27 @@ function changeTheme(event) {
     })
 }
 
-themeButtonDark.addEventListener('click', changeTheme);
-themeButtonLight.addEventListener('click', changeTheme);
+themeButtonDark.addEventListener('click', () => changeTheme('light'));
+themeButtonLight.addEventListener('click', () => changeTheme('dark'));
+
+// Сохранение выбранных пользователем настроек в local storage.
+// let lang = 'en';
+// let theme = 'dark';
+
+function setLocalStorage() {
+    localStorage.setItem('lang', currentLang);
+    localStorage.setItem('theme', currentTheme);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorages() {
+    if (localStorage.getItem('lang')) {
+        const lang = localStorage.getItem('lang');
+        getTranslate(lang);
+    }
+    if (localStorage.getItem('theme')) {
+        const theme = localStorage.getItem('theme');
+        changeTheme(theme);
+    }
+}
+window.addEventListener('load', getLocalStorages);
