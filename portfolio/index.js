@@ -17,11 +17,16 @@ if (iconMenu) {
     iconMenu.addEventListener('click', () => {
 // Во-первых, функция будет делать блок body неактивным и добавлять затенение для заднего фона.
         document.body.classList.toggle('body_lock');
-        document.body.classList.toggle('body_shadow');
 // Во-вторых, функция меняет иконку меню на крестик.
         iconMenu.classList.toggle('menu__icon_active');
 // В-третьих, функция добавляет выезжающее меню.
         menuBody.classList.toggle('menu__body_active');
+// В-четвертых, при открытии меню в светлой теме крестик станет черного цвета, а при закрытии превратится в белый бургер.
+        if (iconMenu.classList.contains('menu__icon_active') && !themeButtonDark.classList.contains('theme-active')) {
+            iconMenu.classList.add('menu__icon_theme-light');
+        } else {
+            iconMenu.classList.remove('menu__icon_theme-light');
+        }
     })
 // Создаем новое состояние при наведении.
     // iconMenu.addEventListener('mouseenter', () => {
@@ -157,7 +162,7 @@ const sectionPrice = document.querySelector('.price');
 const sectionTitles = document.querySelectorAll('.section-title');
 const sectionTitleWrappers = document.querySelectorAll('.section-title-wrapper');
 const buttonsBordered = document.querySelectorAll('.button_bordered');
-const buttonActive = document.querySelector('.active');
+const buttonActive = document.querySelector('.active')
 
 function changeTheme(event) {
     if (themeButtonDark.classList.contains('theme-active')) {}
@@ -166,6 +171,7 @@ function changeTheme(event) {
         sectionPortfolio.classList.add('light-theme');
         sectionVideo.classList.add('light-theme');
         sectionPrice.classList.add('light-theme');
+        menuBody.classList.add('light-theme');
         sectionTitles.forEach(element => {
             element.classList.add('section-title_light-theme');
         })
@@ -183,6 +189,7 @@ function changeTheme(event) {
         sectionPortfolio.classList.remove('light-theme');
         sectionVideo.classList.remove('light-theme');
         sectionPrice.classList.remove('light-theme');
+        menuBody.classList.remove('light-theme');
         sectionTitles.forEach(element => {
             element.classList.remove('section-title_light-theme');
         })
