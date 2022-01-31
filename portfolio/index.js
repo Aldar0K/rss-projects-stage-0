@@ -275,7 +275,7 @@ getDefaultTheme();
 // Сложные эффекты для кнопок при наведении и/или клике.
 const buttons = document.querySelectorAll('.button');
 
-buttons.forEach(element => {
+buttons.forEach((element) => {
     element.addEventListener('click', function(e) {
         const x = e.clientX;
         const y = e.clientY;
@@ -294,4 +294,5 @@ buttons.forEach(element => {
         this.appendChild(circle);
 
         setTimeout(() => circle.remove(), 500);
-})});
+    }
+    )});
