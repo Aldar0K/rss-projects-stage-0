@@ -122,7 +122,6 @@ function getTranslate(lang) {
           }
     })
     currentLang = lang;
-    console.log(`Текущий язык сайта: ${currentLang}`);
 }
 
 // Вводим новые переменные для кнопок смены языков.
@@ -143,7 +142,6 @@ function changeClassSelected(event) {
 
 langSwitcherRU.addEventListener('click', changeClassSelected);
 langSwitcherEN.addEventListener('click', changeClassSelected);
-
 
 // Кнопки для переключения темы.
 const themeButtonDark = document.querySelector('.theme__dark');
@@ -192,7 +190,6 @@ function changeTheme(theme) {
         buttonActive.classList.add('active_light-theme')
 
         currentTheme = 'light';
-        console.log(`Текущая тема: ${currentTheme}`);
     }
     if (theme === 'light') {}
     else {
@@ -213,7 +210,6 @@ function changeTheme(theme) {
         buttonActive.classList.remove('active_light-theme')
 
         currentTheme = 'dark';
-        console.log(`Текущая тема: ${currentTheme}`);
     }
     // Проверка, которая убирает выделение с кнопки autumn при переключении тем.
     buttonsBordered.forEach(element => {
@@ -247,3 +243,31 @@ function getLocalStorages() {
     }
 }
 window.addEventListener('load', getLocalStorages);
+
+// Цвет кнопок языков с учетом local storage.
+function getDefaultLang() {
+    if (localStorage.getItem('lang') === 'ru') {
+        langSwitcherEN.classList.remove('selected');
+        langSwitcherRU.classList.add('selected');
+    } 
+    if (localStorage.getItem('lang') === 'en') {
+        langSwitcherRU.classList.remove('selected');
+        langSwitcherEN.classList.add('selected');
+    }
+}
+
+getDefaultLang();
+
+// Иконка темы с учетом local storage.
+function getDefaultTheme() {
+    if (localStorage.getItem('theme') === 'dark') {
+        themeButtonLight.classList.remove('theme-active');
+        themeButtonDark.classList.add('theme-active');
+    } 
+    if (localStorage.getItem('theme') === 'light') {
+        themeButtonDark.classList.remove('theme-active');
+        themeButtonLight.classList.add('theme-active');
+    }
+}
+
+getDefaultTheme();
