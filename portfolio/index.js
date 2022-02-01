@@ -278,7 +278,7 @@ const buttons = document.querySelectorAll('.button');
 buttons.forEach((element) => {
     element.addEventListener('click', function(e) {
         const x = e.clientX;
-        const y = e.clientY;
+        const y = e.pageY;
 
         const buttonTop = e.target.offsetTop;
         const buttonLeft = e.target.offsetLeft;
@@ -294,5 +294,5 @@ buttons.forEach((element) => {
         this.appendChild(circle);
 
         setTimeout(() => circle.remove(), 500);
-    }
-    )});
+    })
+});
