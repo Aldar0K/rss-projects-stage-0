@@ -278,7 +278,7 @@ const buttons = document.querySelectorAll('.button');
 buttons.forEach((element) => {
     element.addEventListener('click', function(e) {
         const x = e.clientX;
-        const y = e.pageY;
+        const y = e.pageY;``
 
         const buttonTop = e.target.offsetTop;
         const buttonLeft = e.target.offsetLeft;
