@@ -2,7 +2,16 @@
 console.log('Score: 60 / 60');
 
 // Кеширование изображений.
+const themes = ['default', 'solovey', 'drozd', 'malinovka', 'javoronok', 'slavka'];
 
+function preloadImages() {
+    themes.forEach(theme => {
+        const img = new Image();
+        img.src = `./assets/img/jpg/${theme}.jpg`;
+    })
+}
+
+preloadImages()
 
 // Переключение кнопок  и картинок.
 const navItem = document.querySelectorAll('.nav__item');
