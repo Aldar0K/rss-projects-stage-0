@@ -96,6 +96,15 @@ body {
     fill: #bdae82;
 }
 
+.icon_active {
+    fill: #bdae82;
+    transition: all 0.3s;
+}
+
+.icon_active:hover {
+    fill: #fff;
+}
+
 .nav {
 }
 
