@@ -13,9 +13,11 @@
     <div class="wrapper">
         <header class="header">
             <div class="container header__container">
-                <svg class="icon header__logo" height="50" width="50" role="img">
-                    <use xlink:href="./assets/img/svg/sprites/logo-sprite.svg#logo"></use>
-                </svg>
+                <logo class="logo header__logo" data-bird="default">
+                    <svg class="icon header__icon" height="50" width="50" role="img">
+                        <use xlink:href="./assets/img/svg/sprites/logo-sprite.svg#logo"></use>
+                    </svg>
+                </logo>
                 <nav class="nav header__nav">
                     <ul class="nav__items">
                         <li class="nav__item" data-bird="solovey">Соловей</li>
@@ -30,11 +32,10 @@
     
         <main class="main">
             <div class="coinainer main__container">
-                <button class="button main__button">
-                    <svg class="icon main__play" width="160" height="160">
-                        <use xlink:href="./assets/img/svg/sprites/play-sprite.svg#play"></use>
-                    </svg>
-                </button>
+                <img class="main__image" src="./assets/img/jpg/default.jpg" alt="forest">
+                <svg class="icon main__play" width="160" height="160">
+                    <use xlink:href="./assets/img/svg/sprites/play-sprite.svg#play"></use>
+                </svg>
             </div>
         </main>
     

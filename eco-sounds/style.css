@@ -70,12 +70,21 @@ body {
 }
 
 .header__container {
-    height: 70px;
-    padding: 15px;
+    height: 60px;
+    padding: 5px 15px;
     position: relative;
+    background: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+}
+
+.header__logo {
+    height: 50px;
+    width: 50px;
 }
 
 .icon {
@@ -85,11 +94,6 @@ body {
 
 .icon:hover {
     fill: #bdae82;
-}
-
-.header__logo {
-    height: 50px;
-    width: 50px;
 }
 
 .nav {
@@ -109,6 +113,10 @@ body {
     cursor: pointer;
 }
 
+.active {
+    color: #bdae82;
+}
+
 .nav__item:hover {
     color: #bdae82;
 }
@@ -118,38 +126,64 @@ body {
 }
 
 .main {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .main__container {
     padding: 0;
     margin: 0 auto;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 120px);
     min-height: 280px;
     min-width: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./assets/img/jpg/solovey.jpg);
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover; */
 }
 
-.button {
+/* .main__container_default {
+    background-image: url(./assets/img/jpg/default.jpg);
 }
 
-.main__button {
-    background: transparent;
+.main__container_solovey {
+    background-image: url(./assets/img/jpg/solovey.jpg);
+}
+
+.main__container_drozd {
+    background-image: url(./assets/img/jpg/drozd.jpg);
+}
+
+.main__container_malinovka {
+    background-image: url(./assets/img/jpg/malinovka.jpg);
+}
+
+.main__container_javoronok {
+    background-image: url(./assets/img/jpg/javoronok.jpg);
+}
+
+.main__container_slavka {
+    background-image: url(./assets/img/jpg/slavka.jpg);
+} */
+
+.main__image {
 }
 
 .main__play {
+    position: absolute;
 }
 
 .footer {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .footer__container {
-    height: 70px;
-    padding: 10px 15px;
+    height: 60px;
+    padding: 5px 15px;
+    background: black;
     position: relative;
     display: flex;
 }
