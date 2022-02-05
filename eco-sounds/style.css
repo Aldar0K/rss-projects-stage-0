@@ -42,6 +42,7 @@ html {
 }
 
 body {
+    height: 100%;
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
@@ -51,9 +52,9 @@ body {
 }
 
 .wrapper {
-    display: flex;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
+    display: flex;
     flex-direction: column;
 }
 
@@ -153,31 +154,22 @@ body {
     background-size: cover; */
 }
 
-/* .main__container_default {
-    background-image: url(./assets/img/jpg/default.jpg);
-}
-
-.main__container_solovey {
-    background-image: url(./assets/img/jpg/solovey.jpg);
-}
-
-.main__container_drozd {
-    background-image: url(./assets/img/jpg/drozd.jpg);
-}
-
-.main__container_malinovka {
-    background-image: url(./assets/img/jpg/malinovka.jpg);
-}
-
-.main__container_javoronok {
-    background-image: url(./assets/img/jpg/javoronok.jpg);
-}
-
-.main__container_slavka {
-    background-image: url(./assets/img/jpg/slavka.jpg);
-} */
-
 .main__image {
+}
+
+.play {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    background-color: transparent;
+    background-image: url(./assets/img/svg/play.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+}
+
+.pause {
+    background-image: url(./assets/img/svg/pause.svg);
 }
 
 .main__play {
