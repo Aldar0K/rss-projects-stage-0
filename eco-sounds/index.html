@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eco-sounds</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/img/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <logo class="logo header__logo" data-bird="default">
+                    <svg class="icon header__icon icon_active" height="50" width="50" role="img">
+                        <use xlink:href="./assets/img/svg/sprites/logo-sprite.svg#logo"></use>
+                    </svg>
+                </logo>
+                <nav class="nav header__nav">
+                    <ul class="nav__items">
+                        <li class="nav__item" data-bird="solovey">Соловей</li>
+                        <li class="nav__item" data-bird="drozd">Дрозд</li>
+                        <li class="nav__item" data-bird="malinovka">Малиновка</li>
+                        <li class="nav__item" data-bird="javoronok">Жаворонок</li>
+                        <li class="nav__item" data-bird="slavka">Славка</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main class="main">
+            <div class="coinainer main__container">
+                <img class="main__image" src="./assets/img/jpg/default.jpg" alt="forest">
+                <!-- <svg class="icon main__play" width="160" height="160">
+                    <use xlink:href="./assets/img/svg/sprites/play-sprite.svg#play"></use>
+                </svg> -->
+                <audio src="./assets/audio/forest.mp3"></audio>
+                <button class="play"></button>
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__data"><span>©</span><span>2022</span>
+                    <a class="github-link" href="https://github.com/Aldar0K">github</a>
+                </div>
+                <div class="footer__rss">
+                    <a href="https://rs.school/js-stage0/" class="rss-link">
+                        <svg class="icon footer__rss-logo" width="135" height="50" role="img">
+                            <use xlink:href="./assets/img/svg/sprites/rss-sprite.svg#rss"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>
