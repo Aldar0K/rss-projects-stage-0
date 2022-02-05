@@ -22,7 +22,7 @@ let isPlay = false;
 // Стоп или пауза трека и переключение кнопки play.
 const playBtn = document.querySelector('.play');
 
-function switchAudio () {
+function switchAudioBtn () {
     if (!isPlay) {
         audio.currentTime = 0;
         audio.play();
@@ -37,7 +37,7 @@ function switchAudio () {
     }
 }
 
-playBtn.addEventListener('click', switchAudio);
+playBtn.addEventListener('click', switchAudioBtn);
 
 // Переключение кнопок, картинок и треков.
 const navItem = document.querySelectorAll('.nav__item');
