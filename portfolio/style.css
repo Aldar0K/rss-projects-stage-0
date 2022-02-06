@@ -763,17 +763,12 @@ button .circle {
     margin-top: 60px;
     width: 100%;
     position: relative;
+    height: 705px;
+    width: 1400px;
 }
 
 .video__player {
-    padding-bottom: 50%;
-    /* height: 705px;
-    width: 1400px; */
-    /* background-image: url(./assets/img/jpg/video-player.jpg); */
-    background: url(./assets/img/jpg/video-player.jpg) center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 @media (max-width: 1200px) {
@@ -795,14 +790,7 @@ button .circle {
         margin-top: 50px;
     }
     .video__player {
-        height: 418px;
-        width: 768px;
-        background-image: url(./assets/img/jpg/video-player-small.jpg);
-        background-size: calc(100%);
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        
     }
     .icon-play {
 
