@@ -296,3 +296,13 @@ buttons.forEach((element) => {
         setTimeout(() => circle.remove(), 500);
     }
     )});
+
+
+// Кастномный видеоплеер.
+
+// Вводим константы для видеоплеера.
+const player = document.querySelector('.player');
+const viewer = document.querySelector('.viewer');
+const
+
+// Функции для видеоплеера.

@@ -759,16 +759,40 @@ button .circle {
 }
 
 /* Чтобы отодвинуть элемент player вниз (в него вставлен задник) */
-.video__player-wrapper {
+/* .video__player-wrapper {
     margin-top: 60px;
     width: 100%;
     position: relative;
     height: 705px;
     width: 1400px;
-}
+} */
 
 .video__player {
-    
+    margin-top: 86px;
+}
+
+.player {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: calc(46% + 60px);
+    max-height: 705px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewer {
+
+}
+
+.play-button {
+
+}
+
+.controls {
+
 }
 
 @media (max-width: 1200px) {
@@ -786,17 +810,21 @@ button .circle {
         align-items: center;
     }
     /* Чтобы отодвинуть элемент player вниз (в него вставлен задник) */
-    .video__player-wrapper {
+    /* .video__player-wrapper {
         margin-top: 50px;
-    }
+    } */
     .video__player {
         
     }
-    .icon-play {
+    .viewer {
 
-        width: 75px;
-        height: 75px;
-        transition: all .3s;
+    }
+    .play-button {
+
+    }
+    
+    .controls {
+    
     }
 }
 
