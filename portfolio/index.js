@@ -302,7 +302,29 @@ buttons.forEach((element) => {
 
 // Вводим константы для видеоплеера.
 const player = document.querySelector('.player');
-const viewer = document.querySelector('.viewer');
-const
+const video = document.querySelector('.viewer');
+const playBtn = document.querySelector('.play-button');
+const controlsPlayBtn = document.querySelector('.play-icon')
 
-// Функции для видеоплеера.
+// Функции и слушатели для видеоплеера.
+
+// Переключение проигрывания и паузы видео по нажатию на главную кнопку, иконку в controls и сам плеер.
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        console.log('play');
+
+        playBtn.classList.add('play-button_pause');
+        controlsPlayBtn.classList.add('pause');
+    } else {
+        video.pause();
+        console.log('pause');
+
+        playBtn.classList.remove('play-button_pause')
+        controlsPlayBtn.classList.remove('pause');
+    }
+}
+
+playBtn.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
+controlsPlayBtn.addEventListener('click', togglePlay);
