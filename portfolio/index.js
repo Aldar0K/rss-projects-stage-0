@@ -304,7 +304,10 @@ buttons.forEach((element) => {
 const player = document.querySelector('.player');
 const video = document.querySelector('.viewer');
 const playBtn = document.querySelector('.play-button');
-const controlsPlayBtn = document.querySelector('.play-icon')
+const controlsPlayBtn = document.querySelector('.play-icon');
+const conrtolsVolumeBtn = document.querySelector('.volume-icon')
+const control = document.querySelector('.controls');
+const sliders = document.querySelectorAll('.slider');
 
 // Функции и слушатели для видеоплеера.
 
@@ -313,6 +316,8 @@ function togglePlay() {
     if (video.paused) {
         video.play();
         console.log('play');
+
+        control.classList.add('controls_active');
 
         playBtn.classList.add('play-button_pause');
         controlsPlayBtn.classList.add('pause');
@@ -328,3 +333,50 @@ function togglePlay() {
 playBtn.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
 controlsPlayBtn.addEventListener('click', togglePlay);
+
+// Уменьшение громкости видео по умолчанию.
+let currentVolume = 0;
+
+function setDefaultVolume () {
+    video.volume = 0.05;
+    currentVolume = 0.05;
+}
+
+setDefaultVolume();
+
+// Изменение прогресса воспроизводства и громкости видео.
+function handleRangeUpdate() {
+    video[this.name] = this.value;
+
+    if (video.volume) {
+        currentVolume = video.volume;
+        console.log(currentVolume);
+    }
+
+    if (video.volume === 0) {
+        conrtolsVolumeBtn.classList.add('mute');
+    } else {
+        conrtolsVolumeBtn.classList.remove('mute');
+    }
+}
+
+sliders.forEach(slider => slider.addEventListener('change', handleRangeUpdate));
+// sliders.forEach(slider => slider.addEventListener('mousemove', handleRangeUpdate));
+
+function muteVideo() {
+    conrtolsVolumeBtn.classList.toggle('mute');
+    video.volume = 0;
+}
+
+function unmuteVideo() {
+    conrtolsVolumeBtn.classList.toggle('mute');
+    video.volume = currentVolume;
+}
+
+conrtolsVolumeBtn.addEventListener('click', () => {
+    if (video.volume !== 0) {
+        muteVideo();
+    } else {
+        unmuteVideo();
+    }
+});
