@@ -301,13 +301,13 @@ buttons.forEach((element) => {
 // Кастномный видеоплеер.
 
 // Вводим константы для видеоплеера.
-const player = document.querySelector('.player');
 const video = document.querySelector('.viewer');
 const playBtn = document.querySelector('.play-button');
 const controlsPlayBtn = document.querySelector('.play-icon');
 const conrtolsVolumeBtn = document.querySelector('.volume-icon')
 const control = document.querySelector('.controls');
 const sliders = document.querySelectorAll('.slider');
+const slider = document.querySelector('.slider');
 
 // Функции и слушатели для видеоплеера.
 
@@ -350,7 +350,6 @@ function handleRangeUpdate() {
 
     if (video.volume) {
         currentVolume = video.volume;
-        console.log(currentVolume);
     }
 
     if (video.volume === 0) {
@@ -361,7 +360,6 @@ function handleRangeUpdate() {
 }
 
 sliders.forEach(slider => slider.addEventListener('change', handleRangeUpdate));
-// sliders.forEach(slider => slider.addEventListener('mousemove', handleRangeUpdate));
 
 function muteVideo() {
     conrtolsVolumeBtn.classList.toggle('mute');
@@ -380,3 +378,20 @@ conrtolsVolumeBtn.addEventListener('click', () => {
         unmuteVideo();
     }
 });
+
+// function handleProgress() {
+//     const percent = (video.currentTime / video.duration) * 100;
+//     slider.style.flexBasis = `${percent}%`;
+
+//     console('handleProgress')
+// }
+
+// video.addEventListener('timeUpdate', handleProgress);
+
+// Закрашивание просмотренной части видео.
+// sliders.forEach(slider => {
+//     slider.addEventListener('input', function() {
+//         const value = this.value;
+//         this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
+//       })
+// })
