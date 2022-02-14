@@ -1,3 +1,7 @@
+// Самооценка по заданию.
+console.log('Score: 50 / 60');
+
+
 // Функция, генерирующая рандомное целое число в диапазоне.
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
