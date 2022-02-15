@@ -31,6 +31,7 @@ getQuotes();
 
 // Функция для проигрывания звука.
 function playSound() {
+    audio.volume = 0.3;
     audio.play();
 }
 
