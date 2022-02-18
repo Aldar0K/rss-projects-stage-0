@@ -10,6 +10,7 @@ const modalResult = document.getElementById('modal-result-wrapper');
 const overlay = document.getElementById('overlay');
 const btnClose = document.getElementById('btn-close');
 const btnReset = document.getElementById('btn-reset');
+const turnSound = document.querySelector('.turn-sound');
 
 
 // Отслеживание поля, по которому кликнул пользователь.
@@ -19,9 +20,16 @@ area.addEventListener('click', e => {
             move % 2 == 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = '0';
             move++;
             check();
+            playTurnSound();
         }
     }
 })
+
+// функции для проигрывания звука действий.
+function playTurnSound() {
+    turnSound.volume = 0.05;
+    turnSound.play();
+}
 
 // Функция проверки.
 function check () {
@@ -41,7 +49,6 @@ function check () {
     ]
 
     for (let i = 0; i < winsArr.length; i++) {
-
         if (
             boxes[winsArr[i][0]].innerHTML == 'X' && boxes[winsArr[i][1]].innerHTML == 'X' && boxes[winsArr[i][2]].innerHTML == 'X'
         ) {
@@ -57,7 +64,7 @@ function check () {
         }
 
         if (move === 9) {
-            contentWrapper.innerHTML = `Tie!`;
+            contentWrapper.innerHTML = `Tie!\nTurns: ${move}`;
             modalResult.style.display = 'block';
         }
     }
@@ -66,7 +73,7 @@ function check () {
 // Функция подготовки результата.
 function prepareResult (winner) {
     // console.log(`Победили ${winner}!`);
-    contentWrapper.innerHTML = `Player "${winner}" won!`;
+    contentWrapper.innerHTML = `Player "${winner}" won!\nTurns: ${move}`;
     modalResult.style.display = 'block';
 }
 
