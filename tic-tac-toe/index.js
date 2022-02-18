@@ -9,15 +9,17 @@ const contentWrapper = document.getElementById('content');
 const modalResult = document.getElementById('modal-result-wrapper');
 const overlay = document.getElementById('overlay');
 const btnClose = document.getElementById('btn-close');
+const btnReset = document.getElementById('btn-reset');
 
 
-// Прослушка.
+// Отслеживание поля, по которому кликнул пользователь.
 area.addEventListener('click', e => {
     if (e.target.className = 'box') {
-        // console.log(e.target);
-        move % 2 == 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = '0';
-        move++;
-        check();
+        if (e.target.innerHTML != 'X' && e.target.innerHTML != '0') {
+            move % 2 == 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = '0';
+            move++;
+            check();
+        }
     }
 })
 
@@ -39,16 +41,24 @@ function check () {
     ]
 
     for (let i = 0; i < winsArr.length; i++) {
+
         if (
             boxes[winsArr[i][0]].innerHTML == 'X' && boxes[winsArr[i][1]].innerHTML == 'X' && boxes[winsArr[i][2]].innerHTML == 'X'
         ) {
-            result = 'крестики';
+            result = 'X';
             prepareResult(result);
+            break;
         } else if (
             boxes[winsArr[i][0]].innerHTML == '0' && boxes[winsArr[i][1]].innerHTML == '0' && boxes[winsArr[i][2]].innerHTML == '0'
         ) {
-            result = 'нолики';
+            result = '0';
             prepareResult(result);
+            break;
+        }
+
+        if (move === 9) {
+            contentWrapper.innerHTML = `Tie!`;
+            modalResult.style.display = 'block';
         }
     }
 }
@@ -56,7 +66,7 @@ function check () {
 // Функция подготовки результата.
 function prepareResult (winner) {
     // console.log(`Победили ${winner}!`);
-    contentWrapper.innerHTML = `Победили ${winner}!`;
+    contentWrapper.innerHTML = `Player "${winner}" won!`;
     modalResult.style.display = 'block';
 }
 
@@ -66,5 +76,8 @@ function reloadPage () {
     location.reload();
 }
 
+
+// Перезагрузка законченной партии по нажатию на кнопку или вне всплывающего окошка.
 overlay.addEventListener('click', reloadPage);
 btnClose.addEventListener('click', reloadPage);
+btnReset.addEventListener('click', reloadPage);
