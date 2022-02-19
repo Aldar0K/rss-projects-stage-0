@@ -84,7 +84,9 @@ function reloadPage () {
 }
 
 
-// Перезагрузка законченной партии по нажатию на кнопку или вне всплывающего окошка.
+// Перезагрузка страницы при нажатии на btn-reset, btn-close или вне всплывающего окна.
 overlay.addEventListener('click', reloadPage);
 btnClose.addEventListener('click', reloadPage);
 btnReset.addEventListener('click', reloadPage);
+
+// Сохранение результатов последних 10 партий.

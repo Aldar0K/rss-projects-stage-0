@@ -139,18 +139,18 @@ body {
 }
 
 #area {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
 }
 
 .box {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     border: 1px solid black;
-    font-size: 34px;
+    font-size: 100px;
     /* color: #bdae82; */
     background-color: #bdae82;
     display: flex;
@@ -160,13 +160,13 @@ body {
 
 #btn-reset {
     margin-top: 30px;
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     background-color: #bdae82;
     color: white;
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
