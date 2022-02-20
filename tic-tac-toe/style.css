@@ -238,6 +238,25 @@ body {
 }
 
 .stats {
+    margin-left: 200px;
+    height: 600px;
+    width: 200px;
+    background-color: #bdae82;
+}
+
+.stats__title {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.stats__list {
+    padding-left: 20px;
+}
+
+.stats__item {
+    margin: 0 0 10px 20px;
+    font-size: 24px;
 }
 
 .footer {
