@@ -77,7 +77,7 @@ function check () {
             break;
         }
 
-        else if (move === 9) {
+        if (i === winsArr.length - 1 && move === 9) {
             result = 'T';
             prepareResult(result);
             setWinStats(result);

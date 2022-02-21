@@ -142,6 +142,7 @@ body {
     width: 600px;
     height: 600px;
     background-color: white;
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
 }
