@@ -244,6 +244,12 @@ body {
     background-color: #bdae82;
 }
 
+.stats__content {
+    height: 550px;
+    width: 200px;
+    background-color: #bdae82;
+}
+
 .stats__title {
     font-size: 30px;
     display: flex;
@@ -257,6 +263,26 @@ body {
 .stats__item {
     margin: 0 0 10px 20px;
     font-size: 24px;
+}
+
+#btn-clear {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    background-color: #bdae82;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#btn-clear:hover {
+    background-color: white;
+    color: black;
 }
 
 .footer {
