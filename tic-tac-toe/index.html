@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300;400;600;700&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/img/ico/favicon.ico">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <h1 class="header__title">Tic Tac Toe</h1>
+            </div>
+        </header>
+    
+        <main class="main">
+            <div class="coinainer main__container">
+                <section class="game">
+                    <div class="area-wrapper">
+                        <div id="area">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                    <div id="btn-reset">RESET GAME</div>
+                    <div id="modal-result-wrapper">
+                        <div id="overlay"></div>
+                        <div id="modal-window">
+                            <div id="content"></div>
+                            <div id="btn-close">Start new game</div>
+                        </div>
+                    </div>
+                    <audio class="turn-sound" src="./assets/audio/turn-sound.wav"></audio>
+                </section>
+
+                <section class="stats">
+                    <div class="stats__content"><h2 class="stats__title">Statistics</h2>
+                        <ul class="stats__list">
+                            <li id="stats__item1"></li>
+                            <li id="stats__item2"></li>
+                            <li id="stats__item3"></li>
+                            <li id="stats__item4"></li>
+                            <li id="stats__item5"></li>
+                            <li id="stats__item6"></li>
+                            <li id="stats__item7"></li>
+                            <li id="stats__item8"></li>
+                            <li id="stats__item9"></li>
+                            <li id="stats__item10"></li>
+                        </ul></div>
+                    <div id="btn-clear">CLEAR</div>
+                </section>
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__data"><span>©</span><span>2022</span>
+                    <a class="github-link" href="https://github.com/Aldar0K">github</a>
+                </div>
+                <div class="footer__rss">
+                    <a href="https://rs.school/js-stage0/" class="rss-link">
+                        <svg class="icon footer__rss-logo" width="135" height="50" role="img">
+                            <use xlink:href="./assets/img/svg/sprites/rss-sprite.svg#rss"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>
