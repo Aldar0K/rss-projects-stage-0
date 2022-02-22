@@ -39,6 +39,7 @@ area.addEventListener('click', e => {
 // функции для проигрывания звука действий.
 function playTurnSound() {
     turnSound.volume = 0.05;
+    turnSound.currentTime = 0;
     turnSound.play();
 }
 
